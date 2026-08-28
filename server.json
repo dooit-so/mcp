@@ -1,0 +1,14 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "so.dooit/mcp",
+  "title": "Dooit",
+  "description": "Read and run a user's task board: tasks, schedules, projects, and weekly/monthly/yearly goals.",
+  "version": "1.0.0",
+  "websiteUrl": "https://dooit.so/mcp",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://app.dooit.so/mcp"
+    }
+  ]
+}
