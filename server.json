@@ -3,6 +3,11 @@
   "name": "so.dooit/mcp",
   "title": "Dooit",
   "description": "Read and run a user's task board: tasks, schedules, projects, and weekly/monthly/yearly goals.",
+  "repository": {
+    "url": "https://github.com/dooit-so/mcp",
+    "source": "github",
+    "id": "1349765451"
+  },
   "version": "1.0.0",
   "websiteUrl": "https://dooit.so/mcp",
   "remotes": [
