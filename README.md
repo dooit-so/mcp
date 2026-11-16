@@ -6,9 +6,10 @@ repo exists because the ecosystem assumes one: [`server.json`](server.json)
 wants a `repository`, aggregators key their claim flow off it, and directory
 entries are `owner/repo` shaped.
 
-Dooit is a lightweight, keyboard-first personal task manager. The MCP server
-lets an agent read your board, agenda, projects and weekly/monthly/yearly
-goals, then create, reschedule, complete, archive and delete tasks on your
+Dooit is a lightweight, keyboard-first personal task manager: tasks in three
+statuses (Todo, Later, Done), with optional projects, dates and recurring
+schedules. The MCP server lets an agent read your board, agenda and projects,
+then create, reschedule, reorder, complete, archive and delete tasks on your
 behalf — in your own timezone, with your own permissions.
 
 ## Connect
@@ -21,8 +22,9 @@ Claude Desktop, claude.ai, ChatGPT, Cursor and other clients take the same URL
 as a custom connector. Auth is OAuth 2.1 with dynamic client registration —
 there is no API key.
 
-You need a [Dooit account](https://app.dooit.so). Reads work on any account;
-writes require an active subscription and are rate limited.
+You need a [Dooit](https://app.dooit.so) Premium account ($5/month or
+$50/year): the MCP connection is a Premium feature, for reads and writes
+alike. Writes are rate limited.
 
 ## Docs
 
@@ -34,9 +36,8 @@ writes require an active subscription and are rate limited.
 ## Tools
 
 Context: `get_board`, `get_agenda`
-Tasks: `list_tasks`, `get_task`, `create_task`, `update_task`, `set_task_done`, `archive_task`, `delete_task`
+Tasks: `list_tasks`, `get_task`, `create_task`, `update_task`, `move_tasks`, `set_task_done`, `archive_task`, `delete_task`
 Projects: `create_project`, `update_project`
-Goals: `list_goals`, `create_goal`, `update_goal`
 
 Call `get_board` first — it returns today's date in the user's timezone plus
 the status and project ids every write needs.
