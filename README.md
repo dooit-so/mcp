@@ -6,10 +6,11 @@ repo exists because the ecosystem assumes one: [`server.json`](server.json)
 wants a `repository`, aggregators key their claim flow off it, and directory
 entries are `owner/repo` shaped.
 
-Dooit is a lightweight, keyboard-first personal task manager: tasks in three
-statuses (Todo, Later, Done), with optional projects, dates and recurring
-schedules. The MCP server lets an agent read your board, agenda and projects,
-then create, reschedule, reorder, complete, archive and delete tasks on your
+Dooit is a lightweight, keyboard-first personal task manager: tasks in your own
+statuses (Todo and any you add, then Scheduled for anything dated ahead, and
+Done), with optional projects, dates and recurring schedules. The MCP server
+lets an agent read your board, agenda and projects, then create, reschedule,
+reorder, move between statuses, complete, archive and delete tasks on your
 behalf — in your own timezone, with your own permissions.
 
 ## Connect
@@ -36,11 +37,11 @@ alike. Writes are rate limited.
 ## Tools
 
 Context: `get_board`, `get_agenda`
-Tasks: `list_tasks`, `get_task`, `create_task`, `update_task`, `move_tasks`, `set_task_done`, `archive_task`, `delete_task`
+Tasks: `list_tasks`, `get_task`, `create_task`, `update_task`, `set_status`, `move_tasks`, `set_task_done`, `archive_task`, `delete_task`
 Projects: `create_project`, `update_project`
 
 Call `get_board` first — it returns today's date in the user's timezone plus
-the status and project ids every write needs.
+the statuses (by name and id) and project ids every write needs.
 
 ## License
 
